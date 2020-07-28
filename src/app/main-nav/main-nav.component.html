@@ -1,0 +1,69 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+
+    <mat-toolbar class="text-white">
+      <mat-icon class="large-icon" aria-hidden="false">person</mat-icon>
+      Admin
+    </mat-toolbar>
+
+
+    <mat-nav-list>
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">home</mat-icon>
+        Dashboard
+      </a>
+
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">home</mat-icon>
+        Sales Reports
+      </a>
+
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">insert_chart_outlined</mat-icon>
+        Statistics
+      </a>
+
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">report</mat-icon>
+        Units Information
+      </a>
+
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">mediation</mat-icon>
+        Units Group
+      </a>
+
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">flag</mat-icon>
+        Notifications
+      </a>
+
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">warning</mat-icon>
+        Warning
+      </a>
+
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">home</mat-icon>
+        System Control
+      </a>
+
+      <a class="text-white" mat-list-item href="#">
+        <mat-icon class="icon" aria-hidden="false">build</mat-icon>
+        Administrtive Tools
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>POSTracker</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
